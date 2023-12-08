@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=Silkscreen&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layered-stack {
+    @apply w-full h-full;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.layer-1 {
+    background-image: url('assets/stacked-layer-1.svg');
+    z-index: 1;
+}
+
+.layer-2 {
+    background-image: url('assets/stacked-layer-2.svg');
+    z-index: 2;
+}
+
+.layer-3 {
+    background-image: url('assets/stacked-layer-3.svg');
+    z-index: 3;
+}
+
+.layer-4 {
+    background-image: url('assets/stacked-layer-4.svg');
+    z-index: 4;
+}
+
+#cover-text {
+    font-family: 'Silkscreen', sans-serif;
+    @apply text-white
+}
+
+.fake-stack {
+    background-color: #4facf7;
+}
+
+#logo {
+    font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+}
