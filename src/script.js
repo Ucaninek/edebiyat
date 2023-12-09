@@ -6,10 +6,18 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 
 import loader from './modules/loader.js';
+import Alpine from 'alpinejs'
+
 loader();
 
-const springConfig = "spring(2, 100, 25, 0)";
-const cover = document.getElementById('cover');
+window.Alpine = Alpine;
+Alpine.start();
+
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+const easingConfig = "easeOutExpo";
 
 barba.init({
     views: [Home, About],
@@ -18,7 +26,9 @@ barba.init({
             name: 'cover',
             leave({ current }) {
                 const tl = anime.timeline({
-                    easing: springConfig
+                    easing: easingConfig,
+                    duration: 1000,
+                    delay: 500
                 });
 
                 enter();
@@ -35,19 +45,19 @@ barba.init({
             },
             enter({ next }) {
                 const tl = anime.timeline({
-                    easing: springConfig
+                    easing: easingConfig,
+                    duration: 100
                 });
-
-                leave();
 
                 tl.add(
                     {
                         targets: next.container,
-                        opacity: [0, 1]
+                        opacity: 1
                     },
                     0
                 );
 
+                leave();
                 return tl.finished;
             }
         }
@@ -57,10 +67,6 @@ barba.init({
 
 barba.hooks.beforeLeave((data) => {
     var namespace = $(data.trigger).text();
-    if (namespace.startsWith('~')) namespace = 'Home';
-    $('#cover-text').text(namespace.charAt(0).toUpperCase() + namespace.slice(1));
-});
-
-barba.hooks.beforeEnter(() => {
-    twemoji.parse(document.body);
+    alert(namespace);
+    $('#cover-text').text('allah');
 });

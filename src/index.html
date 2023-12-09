@@ -17,13 +17,27 @@
 	</head>
 	<body data-barba="wrapper" class="fixed w-screen h-screen">
 		<nav class="fixed top-0 left-0 w-full h-20 shadow-md backdrop-blur-md flex justify-between gap-4 py-4 px-8 items-center">
-			<p id="logo" class="text-4xl">edebiyat</p>
+			<p id="logo" class="text-4xl">edebiad</p>
 			<a id="a-home" href="#">anamenu</a>
 			<a id="a-about" href="./about">hakkinda</a>
 		</nav>
 
-		<main data-barba="container" data-barba-namespace="home" class="w-full h-full flex justify-center items-center">
-			<p class="text-9xl">Home</p>
+		<main data-barba="container" data-barba-namespace="home" class="w-full h-full flex flex-col gap-8 justify-center items-center">
+			<p class="big-text">edebiad</p>
+			<div class="flex gap-8">
+				<div class="card">
+					<div class="card-inner">
+						<p class="card-title">Günün Atasözü</p>
+						<p class="card-content" id="text-atasozu">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores illo.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-inner">
+						<p class="card-title">Günün Deyimi</p>
+						<p class="card-content" id="text-deyim">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores illo.</p>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<div id="cover" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-20 pointer-events-none">
@@ -36,7 +50,7 @@
 				<div class="layered-stack layer-4"></div>
 			</div>
 		</div>
-
 		<script type="module" src="./script.js"></script>
+		<div class="wave"></div>
 	</body>
 </html>

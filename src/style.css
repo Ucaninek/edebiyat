@@ -11,6 +11,13 @@
     position: absolute;
 }
 
+
+body {
+    background-color: #001122;
+    color: white;
+    @apply backdrop-blur-3xl;
+}
+
 .layer-1 {
     background-image: url('assets/stacked-layer-1.svg');
     z-index: 1;
@@ -37,9 +44,37 @@
 }
 
 .fake-stack {
-    background-color: #4facf7;
+    background-color: #002233;
 }
 
 #logo {
     font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+}
+
+.big-text {
+    @apply text-6xl sm:text-7xl md:text-8xl xl:text-9xl;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+.card {
+    @apply w-96 h-64 rounded-xl p-2 bg-black bg-opacity-30 overflow-hidden;
+    background-image: url('./assets/circle-scatter-haikei.svg');
+}
+
+.card .card-title {
+    @apply font-bold text-2xl text-center
+}
+
+.card .card-inner {
+    @apply w-full h-full backdrop-blur-3xl flex flex-col gap-2 rounded-lg p-6 bg-black bg-opacity-30;
+}
+
+.wave {
+    @apply w-full h-full fixed top-0 left-0 pointer-events-none;
+    background-image: url('./assets/wave-haikei.svg');
+    background-repeat: repeat-x;
+    z-index: -1;
 }
