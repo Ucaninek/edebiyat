@@ -11,36 +11,73 @@
 		<meta name="revisit-after" content="1 days" />
 		<meta name="author" content="Zemi" />
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Edebiyat</title>
 	</head>
-	<body data-barba="wrapper" class="fixed w-screen h-screen">
-		<nav class="fixed top-0 left-0 w-full h-20 shadow-md backdrop-blur-md flex justify-between gap-4 py-4 px-8 items-center">
+	<body data-barba="wrapper" class="w-screen h-screen">
+		<nav class="w-full h-20 shadow-md backdrop-blur-md mb-32 flex justify-between gap-4 py-4 px-8 items-center">
 			<p id="logo" class="text-4xl">edebiad</p>
 			<a id="a-home" href="#">anamenu</a>
 			<a id="a-about" href="./about">hakkinda</a>
 		</nav>
 
-		<main data-barba="container" data-barba-namespace="home" class="w-full h-full flex flex-col gap-8 justify-center items-center">
+		<main data-barba="container" data-barba-namespace="home" class="w-full flex flex-col gap-8 justify-center items-center">
 			<p class="big-text">edebiad</p>
-			<div class="flex gap-8">
+			<div class="cards-grid w-full max-w-7xl gap-8 flex-wrap items-center justify-center">
 				<div class="card">
 					<div class="card-inner">
 						<p class="card-title">Günün Atasözü</p>
-						<p class="card-content" id="text-atasozu">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores illo.</p>
+						<p class="card-content title" id="text-proverb">...</p>
+						<p class="card-content meaning" id="text-proverb-meaning"></p>
 					</div>
 				</div>
 				<div class="card">
 					<div class="card-inner">
-						<p class="card-title">Günün Deyimi</p>
-						<p class="card-content" id="text-deyim">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores illo.</p>
+						<p class="card-title">Kelime</p>
+						<p class="card-content title" id="text-randomWord-word">...</p>
+						<p class="card-content meaning" id="text-randomWord-meaning"></p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-inner">
+						<p class="card-title">Yanlış Kullanılan Kelime</p>
+						<div class="flex gap-2 text-pink-600 items-center justify-center text-xl">
+							<span class="mt-1 material-symbols-outlined"> close </span>
+							<p class="card-content" id="text-confusedWord-improper">...</p>
+						</div>
+						<div class="flex gap-2 text-sky-500 items-center justify-center text-xl">
+							<span class="mt-1 material-symbols-outlined"> done </span>
+							<p class="card-content h-min" id="text-confusedWord-proper">...</p>
+						</div>
+					</div>
+				</div>
+				<div class="card col-span-1 lg:col-span-2">
+					<div class="card-inner">
+						<p class="card-title">Yabancı Kelime</p>
+						<p class="card-content title" id="text-foreignWord-word">...</p>
+						<p class="card-content" id="text-foreignWord-meaning">...</p>
+						<div class="flex gap-2">
+							<p><b>öneri:</b></p>
+							<p class="card-content" id="text-foreignWord-suggestion">...</p>
+						</div>
+						<div class="flex gap-2">
+							<p><b>köken:</b></p>
+							<p class="card-content" id="text-foreignWord-orign">...</p>
+						</div>
+					</div>
+				</div>
+				<div class="card col-span-1 sm:col-span-2 lg:col-span-1">
+					<div class="card-inner">
+						<p class="card-title">Kural</p>
+						<a class="card-content title cursor-pointer text-center" target="_blank" id="text-randomRule-rule">...</a>
 					</div>
 				</div>
 			</div>
 		</main>
 
-		<div id="cover" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-20 pointer-events-none">
+		<div id="cover" class="w-full h-full overflow-hidden fixed top-0 flex justify-center items-center z-20 pointer-events-none">
 			<p id="cover-text" class="z-10 big-text">yukleniyor..</p>
 			<div class="fake-stack w-full h-full absolute top-0 left-0"></div>
 			<div id="stack" class="w-full h-full absolute top-0 left-0">

@@ -15,7 +15,7 @@
 body {
     background-color: #001122;
     color: white;
-    @apply backdrop-blur-3xl;
+    @apply backdrop-blur-3xl ;
 }
 
 .layer-1 {
@@ -38,6 +38,7 @@ body {
     z-index: 4;
 }
 
+
 #cover-text {
     font-family: 'Silkscreen', sans-serif;
     @apply text-white
@@ -59,9 +60,24 @@ nav a {
     cursor: pointer;
 }
 
+html, body {height: 100%}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.title {
+    @apply text-sky-500 font-bold text-xl
+}
+
 .card {
-    @apply w-96 h-64 rounded-xl p-2 bg-black bg-opacity-30 overflow-hidden;
+    @apply rounded-xl bg-blue-600 w-full h-full bg-opacity-50 overflow-hidden p-2;
     background-image: url('./assets/circle-scatter-haikei.svg');
+    background-size: cover;
+}
+
+.cards-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-8;
 }
 
 .card .card-title {
@@ -69,11 +85,11 @@ nav a {
 }
 
 .card .card-inner {
-    @apply w-full h-full backdrop-blur-3xl flex flex-col gap-2 rounded-lg p-6 bg-black bg-opacity-30;
+    @apply w-full h-full backdrop-blur-3xl flex flex-col gap-2 rounded-lg p-6 bg-black bg-opacity-50 shadow-lg overflow-hidden;
 }
 
 .wave {
-    @apply w-full h-full fixed top-0 left-0 pointer-events-none;
+    @apply w-full h-full absolute top-0 left-0 pointer-events-none;
     background-image: url('./assets/wave-haikei.svg');
     background-repeat: repeat-x;
     z-index: -1;

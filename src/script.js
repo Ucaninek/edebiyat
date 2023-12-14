@@ -6,12 +6,15 @@ import Home from './pages/Home.js';
 import About from './pages/About.js';
 
 import loader from './modules/loader.js';
-import Alpine from 'alpinejs'
+//import Alpine from 'alpinejs'
 
 loader();
 
-window.Alpine = Alpine;
-Alpine.start();
+import LocomotiveScroll from 'locomotive-scroll';
+const scroll = new LocomotiveScroll();
+
+//window.Alpine = Alpine;
+//Alpine.start();
 
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
@@ -62,7 +65,7 @@ barba.init({
             }
         }
     ],
-    preventRunning: true
+    preventRunning: true,
 });
 
 barba.hooks.beforeLeave((data) => {

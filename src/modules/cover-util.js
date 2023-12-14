@@ -1,4 +1,8 @@
 import anime from 'animejs';
+import $ from 'jquery';
+
+$('html').addClass('noscroll');
+$('body').addClass('noscroll');
 
 export function enter() {
     anime({
@@ -21,9 +25,8 @@ export function enter() {
         delay: 150,
         duration: 300
     });
-    anime({
-        targets: []
-    });
+    $('html').addClass('noscroll');
+    $('body').addClass('noscroll');
 }
 
 export function leave() {
@@ -41,6 +44,10 @@ export function leave() {
             easing: 'easeOutExpo',
             delay: 250,
             duration: 1000,
+            complete: () => {
+                $('html').removeClass('noscroll');
+                $('body').removeClass('noscroll');
+            }
         });
         anime({
             targets: ['#cover-text'],

@@ -11,23 +11,24 @@
 		<meta name="revisit-after" content="1 days" />
 		<meta name="author" content="Zemi" />
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 		<link rel="stylesheet" href="../style.css" />
 
 		<title>Edebiyat</title>
 	</head>
-	<body data-barba="wrapper" class="fixed w-screen h-screen">
-		<nav class="fixed top-0 left-0 w-full h-20 backdrop-blur-md flex justify-between gap-4 py-4 px-8 items-center">
-			<p id="logo" class="text-4xl">edebiyat</p>
-			<a href="../index.html">anamenu</a>
-			<a href="#">hakkinda</a>
+	<body data-barba="wrapper" class="w-screen h-screen">
+		<nav class="w-full h-20 shadow-md backdrop-blur-md mb-32 flex justify-between gap-4 py-4 px-8 items-center">
+			<p id="logo" class="text-4xl">edebiad</p>
+			<a id="a-home" href="../index.html">anamenu</a>
+			<a id="a-about" href="#">hakkinda</a>
 		</nav>
 
-		<main data-barba="container" data-barba-namespace="about" class="w-full h-full flex justify-center items-center">
-			<p class="text-9xl">About</p>
+		<main data-barba="container" data-barba-namespace="about" class="w-full flex flex-col gap-8 justify-center items-center">
+			<p class="big-text">About</p>
 		</main>
 
-		<div id="cover" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-20 pointer-events-none">
-			<p id="cover-text" class="z-10 text-8xl">Yukleniyor..</p>
+		<div id="cover" class="w-full h-full overflow-hidden fixed top-0 flex justify-center items-center z-20 pointer-events-none">
+			<p id="cover-text" class="z-10 big-text">yukleniyor..</p>
 			<div class="fake-stack w-full h-full absolute top-0 left-0"></div>
 			<div id="stack" class="w-full h-full absolute top-0 left-0">
 				<div class="layered-stack layer-1"></div>
@@ -36,7 +37,7 @@
 				<div class="layered-stack layer-4"></div>
 			</div>
 		</div>
-
 		<script type="module" src="../script.js"></script>
+		<div class="wave"></div>
 	</body>
 </html>
