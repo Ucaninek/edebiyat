@@ -17,14 +17,14 @@
 		<title>Edebiyat</title>
 	</head>
 	<body data-barba="wrapper" class="w-screen h-screen">
-		<nav class="w-full h-20 shadow-md backdrop-blur-md mb-32 flex justify-between gap-4 py-4 px-8 items-center">
+		<nav class="w-full h-20 sticky top-0 shadow-md backdrop-blur-md mb-32 flex justify-between gap-4 py-4 px-8 items-center z-30">
 			<p id="logo" class="text-4xl">edebiad</p>
-			<a id="a-home" href="../index.html">anamenu</a>
-			<a id="a-about" href="#">hakkinda</a>
+			<a id="a-home" href="./">anamenu</a>
+			<a id="a-eserler" href="./eserler/">eserler</a>
 		</nav>
 
-		<main data-barba="container" data-barba-namespace="about" class="w-full flex flex-col gap-8 justify-center items-center">
-			<p class="big-text">About</p>
+		<main data-barba="container" data-barba-namespace="eserler" class="flex flex-col gap-8 justify-center items-center w-full h-2/3">
+			<div class="gallery w-full overflow-auto h-full whitespace-nowrap">//todo: burayi yap kole</div>
 		</main>
 
 		<div id="cover" class="w-full h-full overflow-hidden fixed top-0 flex justify-center items-center z-20 pointer-events-none">

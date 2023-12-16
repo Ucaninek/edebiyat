@@ -3,7 +3,7 @@ import anime from 'animejs';
 import { enter, leave } from './modules/cover-util.js';
 
 import Home from './pages/Home.js';
-import About from './pages/About.js';
+import Eserler from './pages/Eserler.js';
 
 import loader from './modules/loader.js';
 //import Alpine from 'alpinejs'
@@ -23,7 +23,7 @@ if (history.scrollRestoration) {
 const easingConfig = "easeOutExpo";
 
 barba.init({
-    views: [Home, About],
+    views: [Home, Eserler],
     transitions: [
         {
             name: 'cover',

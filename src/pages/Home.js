@@ -5,7 +5,7 @@ class Home {
     namespace = 'home';
     beforeEnter = async _data => {
         $('#a-home').attr('href', '#');
-        $('#a-about').attr('href', './about');
+        $('#a-eserler').attr('href', './eserler');
         const data = await getAll();
         $('#text-proverb').text(data.proverb.content);
         $('#text-proverb-meaning').text(data.proverb.meaning);
@@ -16,7 +16,6 @@ class Home {
         $('#text-randomWord-word').text(data.randomWord.content);
         $('#text-randomWord-meaning').text(data.randomWord.meaning);
 
-        console.log(data);
         $('#text-randomRule-rule').text(data.randomRule.rule);
         $('#text-randomRule-rule').attr('href', data.randomRule.url);
 
